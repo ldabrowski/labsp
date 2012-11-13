@@ -22,7 +22,7 @@ ls|tr [:lower:] [:upper:]
 ```
 2.Wyświetl listę praw dostępu do plików w aktualnym katalogu, ich rozmiar i nazwę.
 ```sh
-find . -type f -exec ls -l '{}' ';' | cut -d ' ' -f1,5,9
+find . -printf "Plik: %f Rozmiar: %s Prawa: %M \n" -maxdepth 1
 ```
 3.Wyświetl listę plików w aktualnym katalogu, posortowaną według rozmiaru pliku.
 ```sh
