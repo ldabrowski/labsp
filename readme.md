@@ -34,7 +34,7 @@ sort -t : -k3 -nr /etc/passwd
 ```
 5.Wyświetl zawartość pliku /etc/passwd posortowaną najpierw według numerów GID w kolejności od największego do najmniejszego, a następnie UID.
 ```sh
-sort -t : -k4 -nr /etc/passwd
+sort -t : -k4 -nr /etc/passwd | sort -t : -k3
 ```
 6.Podaj liczbę plików każdego użytkownika.
 ```sh
