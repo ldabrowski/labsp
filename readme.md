@@ -28,4 +28,8 @@ find . -not -type d -maxdepth 1 -exec ls -l '{}' ';' | cut -d ' ' -f1,5,9
 ```sh
 ls -S
 ```
+4. Wyświetl zawartość pliku /etc/passwd posortowaną według numerów UID w kolejności od największego do najmniejszego.
+```sh
+sort -t : -n -k3 -r /etc/passwd
+```
 
