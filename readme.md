@@ -2,7 +2,7 @@
 
 1. Zad 8. Zlicz wszystkie pliki znajdujące się w katalogu /etc i jego podkatalogach.
 ~~~sh
-ls -1 /etc/. | wc -l
+s find /etc -type f follow | wc -1 
 ~~~
 
 2. Zad. 7. Kazde slowo pliku wyswietlane w osobnej linii.
