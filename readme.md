@@ -13,3 +13,10 @@ cat plik.txt | tr " \t" "\n"
 ~~~sh
 cat /etc/passwd | head -n 3 | wc -m
 ~~~
+
+#Laboratorium 4
+
+1. Wyświetl listę plików z aktualnego katalogu, zamieniając wszystkie małe litery na duże.
+~~~sh
+ls | tr '[a-z]' '[A-Z]'
+~~~
