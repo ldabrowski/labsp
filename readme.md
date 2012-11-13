@@ -30,11 +30,11 @@ ls --sort=size -1
 ```
 4.Wyświetl zawartość pliku /etc/passwd posortowaną według numerów UID w kolejności od największego do najmniejszego.
 ```sh
-cat /etc/passwd | sort --reverse --field-separator=":" --general-numeric-sort --key 3
+sort -t : -k3 -nr /etc/passwd
 ```
 5.Wyświetl zawartość pliku /etc/passwd posortowaną najpierw według numerów GID w kolejności od największego do najmniejszego, a następnie UID.
 ```sh
-cat /etc/passwd | sort --field-separator=":" --general-numeric-sort --key 4,3 --reverse
+sort -t : -k4 -nr /etc/passwd
 ```
 6.Podaj liczbę plików każdego użytkownika.
 ```sh
