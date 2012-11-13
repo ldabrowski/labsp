@@ -20,3 +20,12 @@ cat /etc/passwd | head -n 3 | wc -m
 ```sh
 ls|tr [:lower:] [:upper:]
 ```
+2. Wyświetl listę praw dostępu do plików w aktualnym katalogu, ich rozmiar i nazwę.
+```sh
+find . -not -type d -maxdepth 1 -exec ls -l '{}' ';' | cut -d ' ' -f1,5,9
+```
+3. Wyświetl listę plików w aktualnym katalogu, posortowaną według rozmiaru pliku.
+```sh
+ls -S
+```
+
