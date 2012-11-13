@@ -26,10 +26,17 @@ find . -printf "Plik: %f Rozmiar: %s Prawa: %M \n" -maxdepth 1
 ```
 3.Wyświetl listę plików w aktualnym katalogu, posortowaną według rozmiaru pliku.
 ```sh
-ls -S
+ls --sort=size -1
 ```
 4.Wyświetl zawartość pliku /etc/passwd posortowaną według numerów UID w kolejności od największego do najmniejszego.
 ```sh
-sort -t : -n -k3 -r /etc/passwd
+cat /etc/passwd | sort --reverse --field-separator=":" --general-numeric-sort --key 3
 ```
-
+5.Wyświetl zawartość pliku /etc/passwd posortowaną najpierw według numerów GID w kolejności od największego do najmniejszego, a następnie UID.
+```sh
+cat /etc/passwd | sort --field-separator=":" --general-numeric-sort --key 4,3 --reverse
+```
+6.Podaj liczbę plików każdego użytkownika.
+```sh
+find / -printf "%u\n" 2> /dev/null | sort | uniq -c
+```
