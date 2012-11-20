@@ -41,32 +41,32 @@ sort -t : -k4 -nr /etc/passwd | sort -t : -k3
 find / -printf "%u\n" 2> /dev/null | sort | uniq -c
 ```
 #Laboratorium 5
-Zad. 1
+Zad. 1 Znajdź w swoim katalogu domowym (bez podkatalogów) wszystkie pliki, które zostały zmodyfikowane w ciągu ostatnich dziesięciu dni i wyświetl ich nazwy.
 ```sh
 
 find ~/ -maxdepth 1 -mtime -10
 ```
-Zad. 2
+Zad. 2 Znajdź wszystkie pliki zwykłe w systemie, które mają w nazwie ciąg znaków „conf” i wyświetl ich nazwy na ekranie.
 ```sh
 
 find  / -name \*config\* -type f 2> /dev/null
 ```
-Zad. 3
+Zad. 3 Znajdź w swoim katalogu domowym wszystkie pliki, które nie były używane w ciągu ostatnich 20 dni.
 ```sh
 
 find ~/ -atime 20
 ```
-Zad. 4
+Zad. 4 Znajdź w katalogu /etc wszystkie niepuste podkatalogi i pliki o nazwach zaczynających się na literę „a”.
 ```sh
 
 find /etc \( -type f -and -name a* \) -or \( -type d -and ! -empty \) 2> /dev/null
 ```
-Zad. 5
+Zad. 5 Z bieżącego katalogu usuń pliki, których nazwa zaczyna się na literę „x” i zawiera dokładnie trzy znaki.
 ```sh
 
 rm x??
 ```
-Zad. 6
+Zad. 6 Skonstruuj polecenie tworzące katalog, którego nazwą będzie aktualna (w momencie wywołania) systemowa data w formacie rrrr-mm-dd.
 ```sh
 
 mkdir date +%Y-%m-%d
