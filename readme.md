@@ -1,4 +1,4 @@
-#Laboratorium 3
+##Laboratorium 3
 
 1. Zad 8. Zlicz wszystkie pliki znajdujące się w katalogu /etc i jego podkatalogach.
 ```sh
@@ -39,4 +39,35 @@ sort -t : -k4 -nr /etc/passwd | sort -t : -k3
 6.Podaj liczbę plików każdego użytkownika.
 ```sh
 find / -printf "%u\n" 2> /dev/null | sort | uniq -c
+```
+#Laboratorium 5
+Zad. 1
+```sh
+
+find ~/ -maxdepth 1 -mtime -10
+```
+Zad. 2
+```sh
+
+find  / -name \*config\* -type f 2> /dev/null
+```
+Zad. 3
+```sh
+
+find ~/ -atime 20
+```
+Zad. 4
+```sh
+
+find /etc \( -type f -and -name a* \) -or \( -type d -and ! -empty \) 2> /dev/null
+```
+Zad. 5
+```sh
+
+rm x??
+```
+Zad. 6
+```sh
+
+mkdir date +%Y-%m-%d
 ```
