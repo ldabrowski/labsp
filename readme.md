@@ -72,22 +72,22 @@ Zad. 6 Skonstruuj polecenie tworzące katalog, którego nazwą będzie aktualna 
 mkdir date +%Y-%m-%d
 ```
 #Laboratorium 6
-1. W pliku plik.txt znajdź wiersze zawierające co najmniej jeden znak.
+1 . W pliku plik.txt znajdź wiersze zawierające co najmniej jeden znak.
 
 ```sh grep . {1,} plik.txt ```
 
-2. Znajdź w plikach pl* wiersze rozpoczynające się od cyfry.
+2 . Znajdź w plikach pl* wiersze rozpoczynające się od cyfry.
 
 ```sh grep ^[0-9] pl* ```
 
-3. Znajdź pliki, zawierające wiersz w którym na 9 pozycji występuje litera r.
+3 . Znajdź pliki, zawierające wiersz w którym na 9 pozycji występuje litera r.
 
 ```sh ls -1 | grep -E '^.{8}r.*' ```
  
-4. Policz, ilu użytkowników systemu używa powłoki bash (zgodnie z zapisami w pliku /etc/passwd).
+4 . Policz, ilu użytkowników systemu używa powłoki bash (zgodnie z zapisami w pliku /etc/passwd).
 
 ```sh grep -c bash /etc/passwd ```
 
-5. Znajdź wiersze zawierające liczby rzymskie w pliku plik.txt.
+5 . Znajdź wiersze zawierające liczby rzymskie w pliku plik.txt.
 
 ```sh egrep "(X|D|C|M|V|L|I){1,}" plik.txt ```
