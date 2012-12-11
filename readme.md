@@ -91,3 +91,68 @@ mkdir date +%Y-%m-%d
 5 . Znajdź wiersze zawierające liczby rzymskie w pliku plik.txt.
 
 ```sh egrep "(X|D|C|M|V|L|I){1,}" plik.txt ```
+
+#Lab 7
+1.W bieżącym katalogu zamienić rozszerzenia wszystkich plików z rozszerzeniem htm na html. Jeżeli w nazwie pliku istnieje spacja, to należy zamienić ją na znak podkreślenia.
+```sh
+#!/bin/bash
+
+pliki=(`find \`pwd\` -iname "*.htm" `)
+for file in ${pliki[*]}
+do
+    NowyPlik=`echo $file | tr " " "_"`
+    mv "$file"  "$fileN"
+done
+```
+2.Napisać skrypt zawierający funkcję obliczającą silnię. Następnie należy obliczyć silnię z liczby, która jest argumentem skryptu. W przypadku niepoprawnego argumentu należy wypisać odpowiedni komunikat.
+```sh
+#!/bin/bash
+if [ "$1" == "" ]
+then
+  echo "Użycie skryptu $0 błędne. Prawdopodbnie nie podałes argumentu"
+  exit 1
+fi
+silnia() {
+  s=1
+  N=$1
+  while [ $N -ge 1 ]
+  do
+    s=$[$s * $N]
+    N=$[$N - 1]
+  done
+  echo $s
+}
+  silnia $1
+  sil='silnia $1'
+  echo 'Silnia = ' $sil
+  ```
+  3.Napisać skrypt zbierający jak najwięcej informacji o użytkowniku, którego login jest argumentem skryptu. Jeżeli skrypt nie ma argumentu, to należy użyć login osoby uruchamiającej skrypt.
+  ```sh
+  #!/bin/bash
+if [ "$1" == "" ]
+then
+  echo "Użycie skryptu $0 błędne. Prawdopodbnie nie podałes argumentu"
+  exit 1
+fi
+  login=$1
+  echo 'Witaj' $login
+  echo 'Twoja statystyka: '
+  echo 'Host: ' $HOSTNAME
+  echo 'System: ' $OSTYPE
+  echo 'Aktualny katalog: ' $PWD
+  echo 'Katalog pocztowy: ' $MAIL
+  echo 'Powloka: ' $SHELL
+  echo 'UID: ' $UID
+  echo 'Typ terminala: ' $TERM
+  echo 'Architektury sprzętowa: ' $MACHTYPE
+  echo 'Domyślny edytor: ' $EDITOR
+  echo 'Zalogowano jako: ' $USER
+```
+4.Napisz skrypt usuwający z katalogu domowego i jego podkatalogów wszystkie pliki zwykłe o nazwie 'core' starsze niż 3 dni.
+```sh
+#!/bin/bash
+
+`find ~ -name "core" -ctime +3  -type f | xargs -I file rm "$file" `
+
+echo "Pliki zstarsze niz 3 dni zostaly usuniete"
+```
