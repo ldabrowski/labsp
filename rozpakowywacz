@@ -1,0 +1,50 @@
+#!/bin/bash
+echo "ROZPAKOWYWACZ v.1.0"
+
+echo "Podaj katalog, w ktorym znajduje sie archiwum lub wcisnij ENTER jezeli archiwum jest w miejscu, w ktorym sie aktualnie znajdujesz"
+
+read kat
+
+cd "$kat"
+
+echo "Podaj nazwe pliku razem z rozszerzeniem"
+
+read plik
+
+if [ -f "$plik" ] ; then
+ case "$plik" in
+
+        *.tar.bz2) tar xjf $plik ;;
+
+        *.tar.gz) tar xzf $plik ;;
+
+        *.bz2) bunzip2 $plik ;;
+
+        *.rar) unrar x $plik ;;
+
+        *.gz) gunzip $plik ;;
+
+        *.tar) tar xf $plik ;;
+
+        *.tbz2) tar xjf $plik ;;
+
+        *.tgz) tar xzf $plik ;;
+
+        *.zip) unzip $plik ;;
+
+        *.Z) uncompress $plik ;;
+
+        *.7z) 7z x $plik ;;
+
+        *) echo "'$plik' mayday, mamy problem" ;;
+
+
+      esac
+
+
+else
+ 
+     echo "'$plik' nie istnieje"
+fi
+
+echo "GOTOWE! - pliki zostaly wypakowane do biezacego katalogu"
