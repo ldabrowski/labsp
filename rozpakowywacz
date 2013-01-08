@@ -32,8 +32,6 @@ if [ -f "$plik" ] ; then
 
         *.zip) unzip $plik ;;
 
-        *.Z) uncompress $plik ;;
-
         *.7z) 7z x $plik ;;
 
         *) echo "Ups, mamy problem z '$plik'" ;;
