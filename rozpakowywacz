@@ -45,4 +45,4 @@ else
      echo "'$plik' nie istnieje"
 fi
 
-echo "GOTOWE! - pliki zostaly wypakowane do biezacego katalogu"
+echo "GOTOWE! - pliki zostaly wypakowane"
