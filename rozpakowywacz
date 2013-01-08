@@ -37,7 +37,7 @@ if [ -f "$plik" ] ; then
         *) echo "Ups, mamy problem z '$plik'" ;;
 
 
-      esac
+ esac
 
 
 else
