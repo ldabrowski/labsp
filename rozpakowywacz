@@ -1,4 +1,3 @@
-```sh
 #!/bin/bash
 echo "ROZPAKOWYWACZ v.1.0"
 
@@ -47,4 +46,3 @@ else
 fi
 
 echo "GOTOWE! - pliki zostaly wypakowane"
-```
