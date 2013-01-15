@@ -52,4 +52,4 @@ then
       			echo "'$2' nie ma rozszerzenia!"
 
 	fi
-fi
+fi 
