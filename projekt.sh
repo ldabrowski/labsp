@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ###  ROZPAKOWYWACZ v.0.1.0  ###
+### Lukasz Dabrowski ###
 if [ $# -eq 1 ]
 then 
 
