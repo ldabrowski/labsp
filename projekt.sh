@@ -21,7 +21,7 @@ then
         	*) echo "'$1' niepoprawne rozszerzenie" ;;
       	esac
 	else
-      			echo "'$1' nie ma rozszerzenia!"
+      			echo "'$1' nie istnieje!"
 	fi
 fi
 
@@ -49,7 +49,7 @@ then
         	*) echo "'$2' niepoprawne rozszerzenie" ;;
       	esac
 	else
-      			echo "'$2' nie ma rozszerzenia!"
+      			echo "'$2' nie istnieje!"
 
 	fi
 fi 
