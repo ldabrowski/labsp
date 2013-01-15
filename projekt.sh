@@ -2,6 +2,13 @@
 
 ###  ROZPAKOWYWACZ v.0.1.0  ###
 ### Lukasz Dabrowski ###
+
+if [ $# -eq 0 ]
+then
+echo "Podaj nazwe pliku wraz z rozszerzeniem jezeli archiwum znajduje sie w biezacym katalogu"
+echo "lub podaj najpierw sciezke dostepu do pliku a potem jego nazwe"
+fi
+
 if [ $# -eq 1 ]
 then 
 
