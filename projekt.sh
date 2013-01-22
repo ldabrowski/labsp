@@ -5,6 +5,8 @@
 
 if [ $# -eq 0 ]
 then
+echo "Rozpakowywacz v.1.0.1"
+echo "autor: Lukasz Dabrowski"
 echo "Podaj nazwe pliku wraz z rozszerzeniem jezeli archiwum znajduje sie w biezacym katalogu"
 echo "lub podaj najpierw sciezke dostepu do pliku a potem jego nazwe"
 fi
